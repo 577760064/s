@@ -1,0 +1,1 @@
+call cacheissucess_Have_config();

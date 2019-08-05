@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+    <!--begin-->
+    <bean id="certExcelTimeTask" class="cn.com.jit.aqs2.biz.core.timedtask.CertExcelTimeTask"/>
+
+    <bean id="certExcelTimeTaskJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="certExcelTimeTask" />
+        </property>
+        <property name="targetMethod">
+            <value>run</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+    <bean id="certExcelTimeTaskTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean"><!--如果项目报错，把CronTriggerBean换成CronTriggerFactoryBean -->
+        <property name="jobDetail">
+            <ref local="certExcelTimeTaskJob" />
+        </property>
+        <property name="cronExpression">
+            <!-- 每隔一分钟执行一次 -->
+            <!-- 0 */1 * * * ? -->
+            <value>59 50 23 * * ? *</value>
+        </property>
+    </bean>
+    <!--end-->
+
+    <!--<bean id="cacheWriteTask" class="cn.com.jit.aqs2.biz.core.timedtask.CacheWriteTask"/>-->
+
+    <!--<bean id="cacheWriteTaskJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">-->
+        <!--<property name="targetObject">-->
+            <!--<ref bean="cacheWriteTask" />-->
+        <!--</property>-->
+        <!--<property name="targetMethod">-->
+            <!--<value>run</value>-->
+        <!--</property>-->
+        <!--<property name="concurrent">-->
+            <!--<value>false</value>-->
+        <!--</property>-->
+    <!--</bean>-->
+    <!--<bean id="cacheWriteTaskTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">&lt;!&ndash;如果项目报错，把CronTriggerBean换成CronTriggerFactoryBean &ndash;&gt;-->
+        <!--<property name="jobDetail">-->
+            <!--<ref local="cacheWriteTaskJob" />-->
+        <!--</property>-->
+        <!--<property name="cronExpression">-->
+            <!--&lt;!&ndash; 每隔一分钟执行一次 &ndash;&gt;-->
+            <!--&lt;!&ndash; 0 */1 * * * ? &ndash;&gt;-->
+            <!--<value>59 50 00 * * ? *</value>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+
+
+
+
+    <!--<bean id="cacheWriteFiveTask" class="cn.com.jit.aqs2.biz.core.timedtask.CacheSetFiveSecondWhrite"/>-->
+
+    <!--<bean id="cacheWriteFiveTaskJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">-->
+        <!--<property name="targetObject">-->
+            <!--<ref bean="cacheWriteFiveTask" />-->
+        <!--</property>-->
+        <!--<property name="targetMethod">-->
+            <!--<value>run</value>-->
+        <!--</property>-->
+        <!--<property name="concurrent">-->
+            <!--<value>false</value>-->
+        <!--</property>-->
+    <!--</bean>-->
+    <!--<bean id="cacheWriteFiveTaskJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">&lt;!&ndash;如果项目报错，把CronTriggerBean换成CronTriggerFactoryBean &ndash;&gt;-->
+        <!--<property name="jobDetail">-->
+            <!--<ref local="cacheWriteFiveTaskJob" />-->
+        <!--</property>-->
+        <!--<property name="cronExpression">-->
+            <!--&lt;!&ndash; 每隔一分钟执行一次 &ndash;&gt;-->
+            <!--&lt;!&ndash; 0 */1 * * * ? &ndash;&gt;-->
+            <!--<value>*/2 * * * * ?</value>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+
+
+
+    <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean" lazy-init="false" autowire="no">
+        <property name="triggers">
+            <list>
+                <ref local="certExcelTimeTaskTrigger" />
+                <!--<ref local="cacheWriteTaskTrigger" />-->
+                <!--<ref local="cacheWriteFiveTaskJobTrigger" />-->
+            </list>
+        </property>
+        <property name="autoStartup">
+            <value>true</value>
+        </property>
+    </bean>
+</beans>

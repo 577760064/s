@@ -1,0 +1,1 @@
+call iamlogin_Have_config();

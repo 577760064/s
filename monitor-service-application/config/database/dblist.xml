@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<databases>
+    <database>
+        <id>id1</id>
+        <ip>172.16.24.198</ip>
+        <port>3306</port>
+        <password>123456</password>
+        <url>jdbc:mysql://172.16.24.198:3306/gsy</url>
+        <audit>false</audit>
+        <dbName>gsy</dbName>
+        <dbScriptPath>config/database/id1/mysql/</dbScriptPath>
+        <desc>业务数据库</desc>
+        <dialect>org.hibernate.dialect.MySQLDialect</dialect>
+        <driverClassName>com.mysql.jdbc.Driver</driverClassName>
+        <isDefault>true</isDefault>
+        <isEncrypt>false</isEncrypt>
+        <isInner>true</isInner>
+        <manuUrl>false</manuUrl>
+        <type>mysql</type>
+        <username>root</username>
+    </database>
+</databases>

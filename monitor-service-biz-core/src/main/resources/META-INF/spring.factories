@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+cn.com.jit.monitor.biz.core.configuration.DatabaseMybatisAutoConfiguration

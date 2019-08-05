@@ -1,0 +1,191 @@
+{
+  "describe":"This is demo registration center",
+  "serviceInfos":[{
+    "serviceId":"BaseLogService",
+    "serviceName":"BaseLogService",
+    "hostName":"localhost",
+    "port":"21341",
+    "path":"/v1/logservice"
+  },{
+    "serviceId":"AdminRestService",
+    "serviceName":"AdminManagerService",
+    "hostName":"localhost",
+    "port":"21341",
+    "path":"/v1/admin"
+  },{
+    "serviceId":"LoginRestService",
+    "serviceName":"LoginRestServices",
+    "hostName":"localhost",
+    "port":"21341",
+    "path":"/v1/login"
+  },{
+    "serviceId":"LicenseAppService",
+    "serviceName":"LicenseAppService",
+    "hostName":"localhost",
+    "port":"21341",
+    "path":"/v1/licenseapp"
+  },{
+    "serviceId":"DBConfService",
+    "serviceName":"DBConfService",
+    "hostName":"localhost",
+    "port":"21341",
+    "path":"/v1/dbconf"
+  },{
+    "serviceId":"ProductSettingsRestService",
+    "serviceName":"ProductSettingsRestService",
+    "hostName":"localhost",
+    "port":"21341",
+    "path":"/v1/settings"
+  },{
+    "serviceId":"SysInfoRestService",
+    "serviceName":"SysInfoRestService",
+    "hostName":"localhost",
+    "port":"21341",
+    "path":"/v1/sysinfo"
+  },{
+    "serviceId":"ClusterManageService",
+    "serviceName":"ClusterManageService",
+    "hostName":"localhost",
+    "port":"21341",
+    "path":"/v1/clustermanage"
+  },{
+    "serviceId":"BackLogRestService",
+    "serviceName":"BackLogRestService",
+    "hostName":"localhost",
+    "port":"21341",
+    "path":"/v1/backlog"
+  },{
+    "serviceId":"SearchLogService",
+    "serviceName":"SearchLogService",
+    "hostName":"localhost",
+    "port":"21341",
+    "path":"/v1/searchlog"
+  },{
+    "serviceId":"UpgradeService",
+    "serviceName":"UpgradeService",
+    "hostName":"localhost",
+    "port":"9092",
+    "path":"/v1/upgrade"
+  },{
+    "serviceId":"SiteCertService",
+    "serviceName":"SiteCertService",
+    "hostName":"localhost",
+    "port":"21341",
+    "path":"/v1/sitecert"
+  },{
+    "serviceId":"CACertService",
+    "serviceName":"CACertService",
+    "hostName":"localhost",
+    "port":"21341",
+    "path":"/v1/cacert"
+  },{
+    "serviceId":"DeviceConfigRestService",
+    "serviceName":"DeviceConfigRestService",
+    "hostName":"localhost",
+    "port":"21341",
+    "path":"/v1/device"
+  },{
+    "serviceId": "userRestService",
+    "serviceName": "userRestService",
+    "hostName": "localhost",
+    "port": "21341",
+    "path": "/user"
+  } ,{
+    "serviceId": "welcome",
+    "serviceName": "welcome",
+    "hostName": "localhost",
+    "port": "21443",
+    "path": "/welcome"
+  },{
+    "serviceId": "certService",
+    "serviceName": "certService",
+    "hostName": "localhost",
+    "port": "21341",
+    "path": "/cert"
+  },{
+    "serviceId": "DBConfMyService",
+    "serviceName": "DBConfMyService",
+    "hostName": "localhost",
+    "port": "21341",
+    "path": "/dbconf"
+  },{
+    "serviceId": "orgService",
+    "serviceName": "orgService",
+    "hostName": "localhost",
+    "port": "21341",
+    "path": "/org"
+  },{
+    "serviceId": "updateServices",
+    "serviceName": "updateServices",
+    "hostName": "localhost",
+    "port": "21082",
+    "path": "/update/v1"
+  },{
+    "serviceId": "certExcelService",
+    "serviceName": "certExcelService",
+    "hostName": "localhost",
+    "port": "21341",
+    "path": "/certExcel"
+  },{
+    "serviceId": "logQueryService",
+    "serviceName": "logQueryService",
+    "hostName": "localhost",
+    "port": "21341",
+    "path": "/logQuery"
+  },{
+    "serviceId": "indexService",
+    "serviceName": "indexService",
+    "hostName": "localhost",
+    "port": "21341",
+    "path": "/index"
+  },{
+    "serviceId": "ManagerService",
+    "serviceName": "ManagerService",
+    "hostName": "localhost",
+    "port": "21341",
+    "path": "/manager"
+  },{
+    "serviceId": "dictRestService",
+    "serviceName": "dictRestService",
+    "hostName": "localhost",
+    "port": "21341",
+    "path": "/dict"
+  },{
+    "serviceId": "systemlogService",
+    "serviceName": "systemlogService",
+    "hostName": "localhost",
+    "port": "21341",
+    "path": "/systemlog"
+  },{
+    "serviceId": "excelFlagRestService",
+    "serviceName": "excelFlagRestService",
+    "hostName": "localhost",
+    "port": "21341",
+    "path": "/excelflag"
+  },{
+    "serviceId": "CacheRestService",
+    "serviceName": "CacheRestService",
+    "hostName": "localhost",
+    "port": "21341",
+    "path": "/cache"
+  },{
+    "serviceId": "snapRestService",
+    "serviceName": "snapRestService",
+    "hostName": "localhost",
+    "port": "21341",
+    "path": "/snap"
+  },{
+    "serviceId": "certSnapInfoService",
+    "serviceName": "certSnapInfoService",
+    "hostName": "localhost",
+    "port": "21341",
+    "path": "/certSnapInfo"
+  },{
+    "serviceId": "certStatisRestService",
+    "serviceName": "certStatisRestService",
+    "hostName": "localhost",
+    "port": "21341",
+    "path": "/certStatis"
+  }
+  ]
+}

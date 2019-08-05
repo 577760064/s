@@ -1,0 +1,1 @@
+CALL schema_change();

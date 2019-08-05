@@ -1,0 +1,1 @@
+ call aqs_cert_snapCount();

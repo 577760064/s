@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<bean id="crlTemplate" class="org.springframework.data.redis.core.RedisTemplate">
+		<property name="connectionFactory" ref="jedisConnectionFactory"/>
+	</bean>
+	
+	<bean id="crlCache" class="cn.com.jit.platform.cacert.crl.cache.impl.CRLCacheMemoryImpl"> </bean>
+
+	<bean id="defaultCertificateValidatorFactory" class="cn.com.jit.platform.cacert.validator.impl.DefaultCertificateValidatorFactory" init-method="load"/>
+
+	<bean id="caValidatorListener" class="cn.com.jit.platform.cacert.validator.listener.CAValidatorListener">
+		<constructor-arg>
+			<ref bean="defaultCertificateValidatorFactory"/>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="defaultCRLCacheListener" class="cn.com.jit.platform.cacert.crl.listener.DefaultCRLCacheListener"></bean>
+
+</beans>

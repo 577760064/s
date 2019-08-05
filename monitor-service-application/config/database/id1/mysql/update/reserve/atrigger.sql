@@ -1,0 +1,1 @@
+alter table aqs_cert_info_cache change oldorg_id oldorg_id VARCHAR(255)  after org_inner_code;
